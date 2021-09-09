@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Data'],
+          ['Doctor',   10],
+          ['Patient', 100],
+          ['Beds',     50],
+          ['Nurese',   20],
+          ['Pharmacy', 5],
+          ['Equipment',10]
+        ]);
+
+       var options = {
+          title: 'AVAILABILITY',
+          pieHole: 0.5,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "WEBSITE TRAFFIC"
+	},
+	axisX:{
+		valueFormatString: "DD MMM"
+	},
+	axisY: {
+		title: "Number of Visitors",
+		scaleBreaks: {
+			autoCalculate: true
+		}
+	},
+	data: [{
+		type: "line",
+		xValueFormatString: "DD MMM",
+		color: "#3cc9f0",
+		dataPoints: [
+	{ x: new Date(2020, 11, 1), y: 50 },
+        { x: new Date(2021, 00, 1), y: 55 },
+        { x: new Date(2021, 01, 1), y: 10 },
+        { x: new Date(2021, 02, 1), y: 125 },
+        { x: new Date(2021, 03, 1), y: 99 },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="images/logo.png" rel="icon"/>
+        <title>HOSPITAL AND HEALTHCARE MANAGEMENT</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style1.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript">
+                $(document).ready(function()
+                {
+
+                        $('#doctorlist').show();
+                        $('.doctor li:first-child a').addClass('active');
+                        $('.doctor li a').click(function(e){
+
+                                var tabDiv=this.hash;
+                                $('.doctor li a').removeClass('active');
+                                $(this).addClass('.active');
+                                $('.switchgroup').hide();
+                                $(tabDiv).fadeIn();
+                                e.preventDefault();
+
+                        });
+
+
+                });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            
+        <!--- Header Start -------->
+        <div class="row header">
+
+               <div class="col-md-10">
+                <a class="navbar-brand logo" href="#">
+		<img alt="Brand" src="images/logo.png"></a>
+                    <h2><b>Hospital And Healthcare Management</b></h3>
+            </div>
+
+            <div class="col-md-2 ">
+                <ul class="nav nav-pills ">
+                    <li class="dropdown dmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="index.html">Home</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="profile.html">Change Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                     </li>
+                </ul>
+            </div>
+           
+        </div>
+	<!--- Header Ends --------->
+       
+        <div class="row">
+		
+        <!----- Menu Area Start ------>
+        <div class="col-md-2 menucontent">
+          
+            <a href="dashboard.html"><h1>Dashboard</h1></a>
+                
+                <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation"><a href="department.html">Department</a></li>
+                  <li role="presentation"><a href="doctor.html">Doctors</a></li>
+                  <li role="presentation"><a href="patients.html">Patients</a></li>
+                  <li role="presentation"><a href="nurse.html">Nurse</a></li>
+		  <li role="presentation"><a href="bed.html">Hospital Bed</a></li>
+		  <li role="presentation"><a href="pharmacy.html">Pharmacy</a></li>
+                  <li role="presentation"><a href="equipment.html">Equipment</a></li>
+                  <li role="presentation"><a href="calculator.html">Calculator</a></li>
+                  <li role="presentation"><a href="profile.html">Profile</a></li
+                </ul>
+        </div>
+        <!---- Menu Ares Ends  -------->
+<center><div style="width: 900px; height: 75px;"><h1><b><font size="10px" color="white">WELCOME</font></b></h1></div></center>
+<center><div id="chartContainer" style="height: 250px; width: 50%;"></div></center> <br>
+<center><div id="donutchart" style="height: 250px; width: 50%;"></div></center><br><br>
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

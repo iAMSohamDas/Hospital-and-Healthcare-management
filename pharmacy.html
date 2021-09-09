@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="images/logo.png" rel="icon"/>
+        <title>HOSPITAL AND HEALTHCARE MANAGEMENT</title>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style1.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript">
+                $(document).ready(function()
+                {
+
+                        $('#doctorlist').show();
+                        $('.doctor li:first-child a').addClass('active');
+                        $('.doctor li a').click(function(e){
+
+                                var tabDiv=this.hash;
+                                $('.doctor li a').removeClass('active');
+                                $(this).addClass('.active');
+                                $('.switchgroup').hide();
+                                $(tabDiv).fadeIn();
+                                e.preventDefault();
+
+                        });
+
+
+                });
+        </script>
+<script>
+function myFunction() {
+  alert("Medicine Added Sucessfully!");
+}
+</script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            
+        <!--- Header Start -------->
+        <div class="row header">
+
+            <div class="col-md-10">
+            <a class="navbar-brand logo" href="#">
+		<img alt="Brand" src="images/logo.png"></a>
+                    <h2 ><b>Hospital And Healthcare Management</b></h3>
+            </div>
+
+            <div class="col-md-2 ">
+                <ul class="nav nav-pills ">
+                    <li class="dropdown dmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="index.html">Home</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="profile.html">Change Profile</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                     </li>
+                </ul>
+            </div>
+        </div>
+	<!--- Header Ends --------->
+       
+        <div class="row">
+		
+        <!----- Menu Area Start ------>
+        <div class="col-md-2 menucontent">
+          
+            <a href="dashboard.html"><h1>Dashboard</h1></a>
+                
+                <ul class="nav nav-pills nav-stacked">
+                  <li role="presentation"><a href="department.html">Department</a></li>
+                  <li role="presentation"><a href="doctor.html">Doctors</a></li>
+                  <li role="presentation"><a href="patients.html">Patients</a></li>
+                  <li role="presentation"><a href="nurse.html">Nurse</a></li>
+		  <li role="presentation"><a href="bed.html">Hospital Bed</a></li>
+		  <li role="presentation"><a href="pharmacy.html">Pharmacy</a></li>
+                  <li role="presentation"><a href="equipment.html">Equipment</a></li>
+                  <li role="presentation"><a href="calculator.html">Calculator</a></li>
+                  <li role="presentation"><a href="profile.html">Profile</a></li
+                </ul>
+        </div>
+
+ <div class="col-md-10 maincontent" >
+    <!----------------   Menu Tab   --------------->
+        <div class="panel panel-default contentinside">
+                <div class="panel-heading">Pharmacy Availability</div>
+                <!----------------   Panel body Start   --------------->
+                <div class="panel-body">
+                        <ul class="nav nav-tabs doctor">
+                                <li role="presentation"><a href="#pharmalist">Medicine Available</a></li>
+                                <li role="presentation"><a href="#adddoctor">Add Medicine</a></li>
+                               
+                        </ul>
+
+    <!----------------   Display Doctor Data List Start  --------------->
+        
+        
+        <div id="pharmalist" class="switchgroup">
+        <center><input type="text" name="search" placeholder="Search.."></center>
+
+        <table class="table table-bordered table-hover">
+                <tr class="active">
+                        <td>Medicine</td>
+                        <td>Dose</td>
+                        <td>Route</td>
+                        <td>Quantity</td>
+                        <td>Expiration Date</td>
+                        <td>Options</td>
+                </tr>
+                <tr>
+                            <td>Levothyroxine</td>
+                            <td>200mg</td>
+                            <td>Oral</td>
+                            <td>70</td>
+                            <td>28-03-2025</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr>
+                 <tr>
+                            <td>Lisinopril</td>
+                            <td>500mg</td>
+                            <td>Inject</td>
+                            <td>10</td>
+                            <td>08-10-2028</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr>
+                  <tr>
+                            <td>Metformin</td>
+                            <td>5mg</td>
+                            <td>Oral</td>
+                            <td>100</td>
+                            <td>10-12-2022</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>Amlodipine</td>
+                            <td>400mg</td>
+                            <td>Oral</td>
+                            <td>20</td>
+                            <td>19-10-2026</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>Omeprazole</td>
+                            <td>400mg</td>
+                            <td>Oral</td>
+                            <td>50</td>
+                            <td>28-10-2028</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr> <tr>
+                            <td>Simvastatin</td>
+                            <td>100mg</td>
+                            <td>Oral</td>
+                            <td>130</td>
+                            <td>18-11-2025</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr></td>
+                            <td>Losartan</td>
+                            <td>200mg</td>
+                            <td>Oral</td>
+                            <td>50</td>
+                            <td>15-08-2022</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>Metoprolol</td>
+                            <td>1000mg</td>
+                            <td>Inject</td>
+                            <td>10</td>
+                            <td>28-10-2028</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                     </tr>
+                      <tr>
+                            <td>Metoprolol</td>
+                            <td>10mg</td>
+                            <td>Inject</td>
+                            <td>75</td>
+                            <td>28-10-2028</td>
+                            <td>
+                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" ><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></button></a>
+                            <a  href="#" class="btn btn-danger" ><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+                            </td>
+                    </tr>
+                    </c:forEach>
+                 </table>
+        </div>
+<!----------------   Display Doctor Data List Ends  --------------->
+   
+    <!------ Doctor Edit Info Modal Start Here ---------->
+                            
+           
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                       
+                    
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Edit Pharmacy Information</h4>
+                        </div>
+                        
+                        <div class="modal-body">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                             <form class="form-horizontal" action="editDoct.jsp" method="post">
+                                <div class="form-group">
+                                <label  class="col-sm-2 control-label">Medicine</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" name="doctid" placeholder="Selected" value="" readonly="readonly">
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                <label  class="col-sm-2 control-label">Dose</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="doctname" placeholder="Dose (in mg/ml)" >
+                                </div>
+                                </div>
+
+                                <div class="form-group">
+                                      <label class="col-sm-2 control-label">Route</label>
+                                      <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="email" placeholder="Route" >
+                                      </div>
+                                </div>
+
+                    <div class="form-group">
+                          <label class="col-sm-2 control-label">Quantity</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" name="pwd" placeholder="Quantity" >
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">Expiration Date</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="add" placeholder="Expiration Date" >
+                        </div>
+                    </div>
+
+               
+                        </div>
+                    </div>                                                        
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button onclick="location.href='pharmacy.html'" type="button" class="btn btn-primary">Update</button>
+                                 </div>
+                            </form>
+                             </div>
+                         </div>
+                         </div>
+                    </div>
+                 </div>
+               </div>
+<!----------------   Modal ends here  --------------->
+
+
+    <!----------------   Add Doctor Start   --------------->
+    <div id="adddoctor" class="switchgroup">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" action="#" method="post" onsubmit="myFunction()">
+                    <div class="form-group">
+                    <label  class="col-sm-2 control-label">Medicine</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="doctid" placeholder="Medicine" required="required">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label  class="col-sm-2 control-label">Dose</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="doctname" placeholder="Dose" required="required">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                          <label class="col-sm-2 control-label">Route</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" name="email" placeholder="Route" required="required">
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                          <label class="col-sm-2 control-label">Quantity</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" name="pwd" placeholder="Quantity" required="required">
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label">Expiration Date</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" name="add" placeholder="Expiration Date" required="required">
+                        </div>
+                    </div>
+
+                                        <div class="form-group">
+                          <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Add Medicine</button>
+                          </div>
+                    </div>
+                </form>
+
+               </div>
+        </div>
+    </div>
+                           <!----------------   Add Doctor Ends   --------------->
+                </div>
+           <!----------------   Panel body Ends   --------------->
+         </div>
+    </div>
+	</div>
+</div>
+	<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

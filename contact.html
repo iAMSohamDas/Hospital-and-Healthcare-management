@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title> HOSPITAL AND HEALTHCARE MANAGEMENT </title>
+	<link href="images/logo.png" rel="icon"/>
+	<link href="css/style2.css" type="text/css" rel="stylesheet">
+<style>
+body 
+{
+  background-image: url('images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+mark { 
+  background-color: #337AB7;
+  color: black;
+}
+</style> 
+<script>
+function myFunction() {
+  alert("Query Recorded Sucessfully!");
+}
+</script>	
+</head>
+<body>
+	
+	<div class="top">
+              <center><font size="4px">Team Members : sankalp Mishra(110) || Soham Das(106) || Vishad Mehta(112)</font></center>
+	</div>
+	
+	<div class="logo">
+		<div>
+			<table>
+				<tr>
+					<td width="600px" style="font-size:50px;"> <b> <font color="#337AB7"> HOSPITAL</font> AND HEALTHCARE MANAGEMENT</font> </b> </td>
+					<td> <br> <br> <b>
+						<font size="4px"> 
+							<a href="index.html">HOME</a> 
+							<a href="about.html">ABOUT US</a>  
+							<a href="service.html">SERVICE</a>
+							<a href="doctor2.html">DOCTORS</a> 
+							<a href="contact.html">POST QUERY</a>
+                                                        <a href="login.html">LOGIN</a>
+						</font>
+						       </b>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<br>
+<center><div><font size="6px"><b>Post Your Query</b></font></div></center>
+<br>
+					<center><form  role="form" action="contact.html" method="post" onsubmit="myFunction()">
+						<div>
+							<input type="text" placeholder="First Name" required="required">
+						 	<input type="text" placeholder="Last Name" required="required">
+						</div> <br><br>
+						<div>
+						<select> <option> Related To </option> <option> Doctors </option> <option> Nurse </option> <option> Patients </option> <option> Others </option> </select>
+						<select> <option>A<sup>+</sup></option>
+                                                                 <option>A<sup>-</sup></option>
+                                                                 <option>B<sup>+</sup></option>
+                                                                 <option>B<sup>-</sup></option>
+                                                                 <option>AB<sup>+</sup></option>
+                                                                 <option>AB<sup>-</sup></option>
+                                                                 <option>O<sup>+</sup></option>
+                                                                 <option>O<sup>-</sup></option> </select>
+						</div> <br><br>
+						<div>
+						<input type="text" placeholder="Email" required="required">
+						<input type="text" placeholder="Phone No." required="required">
+						</div> <br><br>
+						<div>
+						<textarea id="subject" name="subject" placeholder="Post Your Query" style="width:34%"></textarea>
+						</div> <br><br>
+						<div>
+						<button type="submit">Submit</button>
+						</div>
+				 </form></center>
+				
+		</div>
+	</div>
+	
+	<br>
+        <br>
+        <br>
+	
+	
+	
+	<div class="nav_down">
+		<div>
+		  <center><font size="6px">SRM UNIVERSITY</font></center>
+		</div>
+	</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>	
